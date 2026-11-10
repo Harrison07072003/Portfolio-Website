@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>12-1</title>
+	<link href = "../Images/web-icon.png" rel = "icon" type = "image/x-icon">
+	<!-- Latest compiled and minified CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Latest compiled JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+</head>
+<body>
+<h1 class = "text-warning bg-success p-3 text-center">
+<img src = "../Images/burger.jpg" class = "float-start" style = "width: 50px;" data-bs-toggle = "offcanvas" data-bs-target = "#nav">
+<span class = "spinner-grow text-warning"></span>
+Yellow Stone
+<span class = "spinner-grow text-warning"></span>
+</h1>
+
+<div class = "offcanvas offcanvas-start" id = "nav">
+	<div class = "offcanvas-header">
+		<h1 class = "offcanvas-title">Yellow Stone</h1>
+		<button type = "button" class ="btn-close" data-bs-dismiss = "offcanvas"></button>
+	</div>
+	<div class = "offcanvas-body">
+		<a href = "#wildAnimals" class = "btn btn-warning p-3 m-3" style = "width: 200px;">Wild Animals</a>
+		<a href = "#hotSprings" class = "btn btn-primary p-3 m-3" style = "width: 200px;">Hot Springs</a>
+	</div>
+</div>
+
+<h3 class = "text-white bg-warning p-2 text-center">The World's First National Park</h3>
+
+<p class = "text-bg-success text-center">March 1,1872, Yellow Stone became the first national park.</p>
+
+<h3 id = "wildAnimals" class = "text-white bg-warning p-2 text-center">
+<span class = "spinner-border text-danger"></span>
+<a href = "https://www.nps.gov/yell/planyourvisit/safety.htm#accordion8062506" target = "_blank" data-bs-toggle = "tooltip" data-bs-placement = "top" title = "Click to see more wildlife info">Wild Animals</a>
+<span class = "spinner-border text-danger"></span>
+</h3>
+
+<div class = "d-flex flex-row justify-content-center">
+	<div class = "card" style = "width: 400px;">
+		<img class = "card-img-top" src = "../Images/bears.jpg" alt = "Bear image">
+		<div class = "card-body">
+			<h4 class = "card-title">Bears</h4>
+			<p class = "card-text">All of Yellow Stone is bear habitat.</p>
+			<a href = "#" class = "btn btn-primary" data-bs-toggle = "modal" data-bs-target = "#bearModal">Safety Tips</a>
+		</div>
+	</div>
+	
+	<div id = "bearModal" class = "modal">
+		<div class = "modal-dialog modal-dialog-centered">
+			<div class = "modal-content">
+				<div class = "modal-header">
+					<h4 class = "modal-title">Safety Tips for Bears</h4>
+					<button type = "button" class = "btn-close" data-bs-dismiss = "modal"></button>
+				</div>
+				<div class = "modal-body">
+					<ul>
+						<li> Keep at least 100 yards (91 meters) from bears at all times and never approach a bear to take a photo. Although surprise encounters do happen, it's your responsibility to maintain this distance.</li>
+						<li>Bear spray is a non-lethal tool specifically designed to deter bears as a last line of defense. It is proven to be highly successful at stopping aggressive behavior in bears. The active ingredient will iritate a bear's nose, eyes, and lungs to cause significant, temporary pain. Unlike pepper spray intended to deter humans, bear spray reaches substantially further and comes out as a cloud instead of a stream. Using bear spray eliminates the need to have precise aim and effectively defuses situations without permanently harming or killing bears.</li>
+						<li>Since 1970, 91% of the people injured by bears in Yellowstone were hiking alone or with only one hiking partner. Only 9% of the people injured by bears were in groups of three or more people.</li>
+					</ul>
+				</div>
+				<div class = "modal-footer">
+					<button type = "button" class = "btn btn-danger" data-bs-dismiss = "modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class = "card" style = "width: 400px;">
+		<div class = "card-body">
+			<h4 class = "card-title">Bison</h4>
+			<p class = "card-text">Bison have injured more people in Yellow Stone than any other animal.</p>
+			<a href = "#" class = "btn btn-primary"  data-bs-toggle = "modal" data-bs-target = "#bisonModal">Safety Tips</a>
+		</div>
+		<img class = "card-img-bottom" src = "../Images/bison.jpg" alt = "Bison image">
+	</div>
+	
+	<div id = "bisonModal" class = "modal">
+		<div class = "modal-dialog modal-dialog-centered">
+			<div class = "modal-content">
+				<div class = "modal-header">
+					<h4 class = "modal-title">Safety Tips for Bison</h4>
+					<button type = "button" class = "btn-close" data-bs-dismiss = "modal"></button>
+				</div>
+				<div class = "modal-body">
+					<ul>
+						<li> Keep at least 25 yards (23 meters) from bison at all times and never approach a bison to take a photo. If need be, turn around and go the other way if a bison walks within 25 yards.</li>
+						<li>If approached too closely, bison may respond by bluff charging, head bobbing while staring at you, pawing, bellowing, or raising its tail. These are warning signs that you are too close and that a charge is imminent—do not stand your ground! Immediately walk or run away from the animal. If the bison follows you, spray bear spray as you are moving away, and seek cover behind nearby trees or cars. </li>
+						<li>Plan extra time when driving through Yellowstone—the speed limit is 45 mph, unless posted otherwise, and you're likely to encounter a "bison jam". If bison are on the road, be patient, drive slowly, and stay in your vehicle. Wait for bison to move along; do not honk your horn or drive aggressively toward them.The size and dark coloration of bison means you should be especially careful when driving at night or anytime visibility is poor.</li>
+					</ul>
+				</div>
+				<div class = "modal-footer">
+					<button type = "button" class = "btn btn-danger" data-bs-dismiss = "modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<h3 id = "hotSprings" class = "text-white bg-warning p-2 text-center">
+<span class = "spinner-border text-white"></span>
+Hot Springs
+<span class = "spinner-border text-white"></span>
+</h3>
+
+<div class = "container p-3">
+	<div id = "slides" class = "carousel slide" data-bs-ride = "carousel">
+		<div class = "carousel-inner">
+			<div class = "carousel-item active">
+				<img src = "../Images/grand-prismatic-spring.jpg" class = "d-block" style = "width: 100%">
+				<div class = "carousel-caption">
+					<h3>Grand Prismatic Spring</h3>
+				</div>
+			</div>
+			<div class = "carousel-item">
+				<img src = "../Images/old-faithful.jpg" class = "d-block" style = "width: 100%">
+				<div class = "carousel-caption">
+					<h3>Old Faithful</h3>
+				</div>
+			</div>
+			<div class = "carousel-item">
+				<img src = "../Images/upper-geyser-basin.jpg" class = "d-block" style = "width: 100%">
+				<div class = "carousel-caption">
+					<h3>Upper Geyser Basin</h3>
+				</div>
+			</div>
+		</div>
+		<button class = "carousel-control-prev" type = "button" data-bs-target = "#slides" data-bs-slide = "prev">
+			<span class = "carousel-control-prev-icon"></span>
+		</button>
+		<button class = "carousel-control-next" type = "button" data-bs-target = "#slides" data-bs-slide = "next">
+			<span class = "carousel-control-next-icon"></span>
+		</button>
+		
+		<div class = "carousel-indicators">
+			<button type = "button" data-bs-target = "#slides" data-bs-slide-to = "0" class = "active"></button>
+			<button type = "button" data-bs-target = "#slides" data-bs-slide-to = "1"></button>
+			<button type = "button" data-bs-target = "#slides" data-bs-slide-to = "2"></button>
+		</div>
+		
+	</div>
+</div>
+<script>
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+</script>
+</body>
+</html>

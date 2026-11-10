@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 5</title>
+	<link href = "../Images/web-icon.png" rel = "icon" type = "image/x-icon">
+	<style>
+	h3{color:#0066FF;}
+	
+	#table1 th{text-align: right;}
+	
+	#table3 td{padding-right: 80px;}
+	
+	#table4 td, #table4 th{text-align: center;
+				padding: 1px 30px;;
+				}
+	
+	#table4 .left{text-align: left;}
+	#table4 .grey{background-color: #D3D3D3;}
+	</style>
+</head>
+<body>
+<h1>Information Security Awareness Survey</h1>
+<h3>1. Demographic Information</h3>
+<form method = "post" action = "Lab5.php">
+<table id = "table1">
+<tr><th>Gender:</th><td><select name = "gender" size = "1">
+	<option value = "Male">Male</option>
+	<option value = "Female">Female</option>
+	<option value = "No dont want to tell">Do not want to tell</option>
+	</select></td></tr>
+<tr><th>Age:</th><td><input type = "number" min = "1" value = "1" name = "age">
+<tr><th>Level:</th><td><select name = "level" size = "1">
+		<option>Choose your level at GGC</option>
+		<option value = "Freshmen">Freshman</option>
+		<option value = "Sophomore">Sophomore</option>
+		<option value = "Junior">Junior</option>
+		<option value = "Senior">Senior</option>
+	</select></td></tr>
+<tr><th>School:</th><td><input type = "text" name = "school" list = "schoolist">
+</td></tr>
+<datalist id = "schoolist">
+	<option value = "SST" label = "SST">
+	<option value = "SB" label = "SB">
+	<option value = "SE" label = "SE">
+	<option value = "SLA" label = "SLA">
+</datalist>
+
+</table>
+
+<h3>2. Have your computer been infencted by a virus before?</h3>
+<table>
+	<tr>
+		<td><label><input type = "radio" name = "response" value = "Yes">Yes</label></td>
+		<td><label><input type = "radio" name = "response" value = "No">No</label></td>
+	</tr>
+</table>
+
+<h3>3. What anti-virus software do you usually use (you can pick more than one answers)?</h3>
+<table id = "table3">
+	<tr>
+	<td><label><input type = "checkbox" name = "Norton" value = "yes">Norton</label></td>
+	<td><label><input type = "checkbox" name = "McAfee" value = "yes">McAfee</label></td>
+	<td><label><input type = "checkbox" name = "Kasperski" value = "yes">Kasperski</label></td>
+	</tr>
+	<tr>
+	<td><label><input type = "checkbox" name = "AVG" value = "yes">AVG</label></td>
+	<td><label><input type = "checkbox" name = "MalwareBytes" value = "yes">MalwareBytes</label></td>
+	<td><label><input type = "checkbox" name = "Avast" value = "yes">Avast</label></td>
+	</tr>
+</table>
+
+<h3>4. Please rate the following questions from strongly disagree to strongly agree:</h3>
+<table id = "table4">
+	<tr class = "grey">
+		<th>Questions</th>
+		<th>Strongly Disagree</th>
+		<th>Disagree</th>
+		<th>Neutral</th>
+		<th>Agree</th>
+		<th>Strongly Agree</th>
+	</tr>
+	<tr>
+		<td class = "left">I know how to create a strong password</td>
+		<td><label><input type = "radio" name = "password" value = "Strongly Disagree"></label></td>
+		<td><label><input type = "radio" name = "password" value = "Disagree"></label></td>
+		<td><label><input type = "radio" name = "password" value = "Neutral"></label></td>
+		<td><label><input type = "radio" name = "password" value = "Agree"></label></td>
+		<td><label><input type = "radio" name = "password" value = "Strongly Agree"></label></td>
+	</tr>
+	<tr class = "grey">
+		<td class = "left">I know how to remove malware from my computer</td>
+		<td><label><input type = "radio" name = "malware" value = "Strongly Disagree"></label></td>
+		<td><label><input type = "radio" name = "malware" value = "Disagree"></label></td>
+		<td><label><input type = "radio" name = "malware" value = "Neutral"></label></td>
+		<td><label><input type = "radio" name = "malware" value = "Agree"></label></td>
+		<td><label><input type = "radio" name = "malware" value = "Strongly Agree"></label></td>
+	</tr>
+	<tr>
+		<td class = "left">I know how to protect my personal information when surfing the Internet</td>
+		<td><label><input type = "radio" name = "information" value = "Strongly Disagree"></label></td>
+		<td><label><input type = "radio" name = "information" value = "Disagree"></label></td>
+		<td><label><input type = "radio" name = "information" value = "Neutral"></label></td>
+		<td><label><input type = "radio" name = "information" value = "Agree"></label></td>
+		<td><label><input type = "radio" name = "information" value = "Strongly Agree"></label></td>
+	</tr>
+</table>
+<br>
+	<input type = "submit">
+	<input type = "reset">
+
+</form>
+</body>
+</html>

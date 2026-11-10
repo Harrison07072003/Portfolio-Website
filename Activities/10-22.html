@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>10-22</title>
+	<link href = "../Images/web-icon.png" rel = "icon" type = "image/x-icon">
+</head>
+<body>
+<script>
+	alert("Welcome to Javascript!");
+	document.write("<h1>Javascript 101</h1>");
+	document.write("<h2>Is Javascript the same as Java?</h2>");
+</script>
+<button onclick = "clickYes()">Yes</button>
+<button onclick = "clickNo()">No</button>
+<br>
+<script>
+	function clickYes(){
+		alert("No, they are different.");
+}
+	function clickNo() {
+		alert("Yes, you are correct.");
+}
+
+</script>
+
+<h2>Sample code:</h2>
+<img id = "myImage" src = "../Images/JavaScript.jpg" style = "width: 300px; height: 200px;"><br>
+<button onclick = "document.getElementById('myImage').src = '../Images/JavaScript.jpg'">Javascript</button>
+<button onclick = "document.getElementById('myImage').src = '../Images/Java.png'">Java</button>
+<br>
+
+<h2>Handle events:</h2>
+<img onmouseover = "bigImg(this)" onmouseout = "normalImg(this)" id = "mImage" src = "../Images/tryJavaScript.jpg"><br>
+<script>
+	function bigImg(obj) {
+		obj.style.width = "440px";
+		obj.style.height = "520px";
+		obj.style.transition = "width 2s, height 2s";
+}
+	function normalImg(obj) {
+		obj.style.width = "220px";
+		obj.style.height = "260px";
+		obj.style.transition = "width 2s, height 5s";
+}
+</script>
+
+<h2 onmouseover = "changeColor(this,'red')" onmouseout = "changeColor(this,'green')">Javascript is fun!</h2>
+<script>
+	function changeColor(obj,newColor) {
+		obj.style.color = newColor;
+}
+</script>
+
+<h3>This page was last modified on:
+<script>
+	document.write(document.lastModified);
+</script>
+</h3>
+</body>
+</html>

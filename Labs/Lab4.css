@@ -1,0 +1,33 @@
+body{font-family: Arial, sans-serif;}
+
+h1,h2{text-align: center;}
+
+img{display: block;
+	margin: auto;}
+ 
+table{margin: auto;
+	  width: 80%;
+	  height: 25px;
+	  border: 5px solid #000000;
+	  border-collapse: collapse;
+	  text-align: center;}
+	  
+th,td{padding: 10px;
+	  color: #000000;}
+
+#table1 tr:first-of-type{background-color:#003300;}
+#table1 tr:last-of-type{background-color:#003300;}
+#table1 tr:first-of-type th{color:#F2F2F2;
+							font-weight: bold;}
+#table1 tr:last-of-type td{color:#F2F2F2;
+						   font-weight: bold;}
+
+.semester{background-color: #009900;
+		  color:#F2F2F2;}
+		  
+.grey{background-color: #C0C0C0;}
+
+.bold{font-weight:bold;}
+
+#table2{background-color:#003300;}
+#table2 td{color: #F2F2F2;}

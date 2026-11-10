@@ -1,0 +1,72 @@
+#wrapper{width: 1000px;
+		 margin: auto;
+		 box-shadow: 5px 5px 5px #1E1E1E;
+		 background-color: #E28743;}
+
+h1{text-align: center;
+	  color: #E28743;}
+	
+nav{float: left;
+	width: 140px;
+	padding: 0;}
+	
+ul{list-style-type: none;
+   margin: 0;
+   padding: 0;}
+	
+nav a {text-decoration: none;
+	   display: block;
+	   padding: 20px;
+	   background-color: #E28743;
+	   border-bottom: 1px solid #F2F2F2;
+	   border: 1px solid #F2F2F2;
+	   margin: 10px;}
+	   
+nav a:link {color: #F2F2F2;}
+nav a:hover{color: #0000FF;
+			background-color: #EFE4D2;}
+
+main{margin-left: 140px;
+	 margin-right: 220px;
+	 padding: 10px;
+	 background-color: #F2F2F2;}
+	 
+aside{float: right;
+	  width: 200px;
+	  color:#F2F2F2;
+	  padding: 10px;}
+
+aside h3{border-bottom: 1px solid #F2F2F2;
+		 text-align: center;
+		 padding-bottom: 2px;}
+		 
+img{width:600px;}
+	
+#grill {width: 150px;
+	  padding: 10px;
+	  border: 5px solid #E28743;
+	  margin: 1%;
+	  background-color: #EFE4D2;
+	  float:left;
+	  height:150px;
+	  }
+
+#sides {width: 150px;
+	    padding: 10px;
+		border: 5px solid #E28743;
+		margin: 1%;
+		background-color: #EFE4D2;
+		float:left;
+		height:150px;
+		}
+#drinks {width: 150px;
+	    padding: 10px;
+		border: 5px solid #E28743;
+		margin: 1%;
+		background-color: #EFE4D2;
+		float: left;
+		height: 150px;}
+	  
+footer{text-align: center;
+	   font-size: 0.8em;
+	   font-style: italic;}

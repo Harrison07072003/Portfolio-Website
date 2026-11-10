@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>11-14</title>
+	<link href = "../Images/web-icon.png" rel = "icon" type = "image/x-icon">
+	<style>
+		canvas{border: 1px solid #d3d3d3;
+			   background-color: #f1f1f1;}
+			   
+		#controls{text-align:center;
+				  width: 480px;}
+				  
+		button{width: 60px;}
+	</style>
+</head>
+<body onload = "startGame()">
+<script>
+var gameArea = {
+	canvas: document.createElement("canvas"),
+	start: function(){
+		this.canvas.width = 480;
+		this.canvas.height = 270;
+		this.context = this.canvas.getContext("2d");
+		document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+		this.interval = setInterval(updateGameArea,20);
+		this.frameNo = 0;
+	},
+	clear: function() {
+		this.context.clearRect(0,0, this.canvas.width, this.canvas.height);
+	},
+	stop: function() {
+		clearInterval(this.interval);
+	},
+}
+
+var car;
+var bushes = [];
+var score;
+
+function startGame(){
+	gameArea.start();
+	car = new component(30,30,"../Images/car-right.png",10,120,"image");
+	score = new component("30px", "Consolas", "red", 280, 40, "text");
+}
+
+function component(width, height, color, x, y, type){
+	this.width = width;
+	this.height = height;
+	this.x = x;
+	this.y = y;
+	this.speedX = 0;
+	this.speedY = 0;
+	this.type = type;
+	
+	if(this.type == "image") {
+		this.image = new Image();
+		this.image.src = color;
+	}
+	
+	this.newPos = function(){
+		this.x += this.speedX;
+		this.y += this.speedY;
+	};
+	this.update = function() {
+		ctx = gameArea.context;
+		ctx.fillStyle = color;
+		
+		if(this.type == "image") {
+			ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+		} else if(this.type == "text") {
+			ctx.font = this.width + " " + this.height;
+			ctx.fillText(this.text, this.x, this.y);
+			}
+	};
+	
+	this.crashWith = function(obj){
+		var carleft = this.x;
+		var carright = this.x + this.width;
+		var cartop = this.y;
+		var carbottom = this.y + this.height;
+		var objleft = obj.x;
+		var objright = obj.x + obj.width;
+		var objtop = obj.y;
+		var objbottom = obj.y + obj.height;
+		var crash = true;
+		if((carbottom < objtop) || (cartop > objbottom) ||(carright < objleft) || (carleft > objright)){
+			crash = false;
+		}
+		return crash;
+	};
+	this.outBounds = function(){
+		var bounds = false;
+		if((this.x < 0) || (this.x > 480) || (this.y < 0) || (this.y > 240)){
+			bounds = true;
+		}
+		return bounds;
+	};
+}
+
+function updateGameArea() {
+	//check crash
+	for(i = 0; i < bushes.length;i++) {
+	if(car.crashWith(bushes[i]) || car.outBounds()) {
+		gameArea.stop();
+		var ok = confirm("Game over. Do you want to play again?");
+		if(ok) {
+			car.x = 10;
+			car.y = 120;
+			car.speedX = 0;
+			car.speedY = 0;
+			gameArea.frameNo = 0;
+			gameArea.interval = setInterval(updateGameArea,20);
+			bushes = [];
+				}
+		else
+			return;
+			}
+		}
+
+
+	gameArea.clear();
+	car.newPos();
+	car.update();
+	
+	gameArea.frameNo++;
+	var w = gameArea.canvas.width;
+	if(gameArea.frameNo == 1 || everyInterval(150)){
+		minHeight = 20;
+		maxHeight = 200;
+		height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
+		minGap = 50;
+		maxGap= 200;
+		gap = Math.floor(Math.random()*(maxGap - minGap+1)+ minGap);
+		bushes.push(new component(20,height,"../Images/bush.jpg",w,0,"image"));
+		bushes.push(new component(20,w-height-gap,"../Images/bush.jpg",w,height+ gap,"image"));
+	}
+	
+	for(i = 0; i < bushes.length;i++) {
+	bushes[i].x -= 1;
+	bushes[i].update();
+	}
+	
+	score.text = "SCORE: " + Math.floor(gameArea.frameNo/10);
+	score.update();
+}
+
+function everyInterval(n){
+	if((gameArea.frameNo % n) == 0)
+		return true;
+	return false;
+}
+
+function moveUp(){
+	car.speedY -= 2;	
+}
+function moveDown(){
+	car.speedY += 2;	
+}
+function moveLeft(){
+	car.speedX -= 2;
+	if(car.speedX < 0) {
+		car.image.src = "../Images/car-left.png";
+	}
+}
+function moveRight(){
+	car.speedX += 2;
+	if(car.speedX > 0) {
+		car.image.src = "../Images/car-right.png";
+	}
+}
+function clearMove(){
+	car.speedY = 0;
+	car.speedX = 0;
+}
+</script>
+<div id = "controls">
+<button onmousedown = "moveUp()" onmouseup = "clearMove()">Up</button><br><br>
+<button onmousedown = "moveLeft()" onmouseup = "clearMove()">Left</button>
+<button onmousedown = "moveRight()" onmouseup = "clearMove()">Right</button><br><br>
+<button onmousedown = "moveDown()" onmouseup = "clearMove()">Down</button>
+</div>
+</body>
+</html>

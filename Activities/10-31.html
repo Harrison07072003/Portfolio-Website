@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>10-31</title>
+	<link href = "../Images/web-icon.png" rel = "icon" type = "image/x-icon">
+</head>
+<body>
+<script>
+	let userName;
+	userName = prompt("Please enter your name:");
+	document.write("<h2>Hello " + userName + "</h2>");
+	
+	let userColor;
+	userColor = prompt(userName + ", what color do you like for the background of the webpage?");
+	document.bgColor = userColor;
+	userColor = prompt(userName + ", what color do you like for the font of the webpage?");
+	document.fgColor = userColor;
+	
+	
+	let score;
+	score = prompt(userName + ", please enter your Test 2 score:");
+	if(score >= 90) {
+		document.write("<h3>" + userName + ", you got an A on Test 2!</h3>");
+	}
+	else if(score >= 80) {
+		document.write("<h3>" + userName + ", you got a B on Test 2!</h3>");
+	}
+	else if(score >= 70) {
+		document.write("<h3>" + userName + ", you got a C on Test 2!</h3>");
+	}
+	else if(score >= 60) {
+		document.write("<h3>" + userName + ", you got a D on Test 2!</h3>");
+	}
+	else {
+		document.write("<h3>" + userName + ", you got a F Test 2!</h3>");
+	}
+</script>
+
+<h2>Select a test to take:</h2>
+<input type = "button" value = "Easy" onclick = "easyTest()">
+<input type = "button" value = "Medium" onclick = "mediumTest()">
+<input type = "button" value = "Hard" onclick = "hardTest()">
+<input type = "button" value = "Repeat" onclick = "repeatTest()">
+
+<script>
+function easyTest(){
+	var number = prompt("What is 5 + 5?");
+	if(parseInt(number) == 10)
+		alert("Correct!");
+	else
+		alert("Wrong");
+}
+
+function mediumTest(){
+	var number1 = prompt("Enter your first number?");
+	var number2 = prompt("Enter your second number?");
+	var answer = prompt("What is " + number1 + " * " + number2 + "?");
+	if(parseInt(number1) * parseInt(number2) == parseInt(answer))
+		alert("Correct!");
+	else
+		alert("Wrong");
+}
+function hardTest(){
+	var number1 = prompt("Enter a small number?");
+	var number2 = prompt("Enter a larger number?");
+	var answer = prompt("What is the sum of all the whole numbers from " + number1 + " to " + number2 + "?");
+	var sum = 0;
+	for(i = parseInt(number1); i <= parseInt(number2);i++) {
+		sum+= i;
+		}
+	if(parseInt(answer) == sum) {
+		alert("Correct!");
+		return true;
+	}
+	else {
+		alert("Wrong");
+		return false;
+	}
+}
+function repeatTest() {
+	while(!hardTest()) {
+	}
+}
+</script>
+
+<h2>Date Count</h2>
+<input type = "button" value = "Count" onclick = "countDate()">
+<script>
+function countDate() {
+	var year, month, day;
+	year = prompt("Enter a year:");
+	month = prompt("Enter a month:") - 1;
+	day = prompt("Enter a day:");
+	var date = new Date(year, month, day);
+	var now = new Date();
+	var days = Math.ceil((date.getTime() - now.getTime())/(1000*60*60*24));
+	if(days >=0)
+		alert("There are " + days + " days left until your special day");
+	else
+		alert(Math.abs(days) + " days have passed since your special day.");
+}
+</script>
+
+<h2>Number Guessing Game</h2>
+<p>Guess a number between 1 and 10</p>
+<input id = "guess" type = "number" min = "1" max = "10">
+<button id = "checkBtn">Check</button>
+<p id = "result"></p>
+
+<script>
+let secret = Math.floor(Math.random()*10)+ 1;
+let resultM = document.getElementById("result");
+let tries = 0;
+let points = 5;
+document.getElementById("checkBtn").onclick = () => {
+	let guessV = parseInt(document.getElementById("guess").value);
+	if(guessV == secret) {
+		tries++;
+		if(tries >= 6)
+			points = 0;
+		else if(tries >= 3)
+			points = 2;
+		resultM.textContent = "Correct, it took you " + tries + " tries, you get " + points + " points" ;
+		}
+	else if(guessV > secret) {
+		resultM.textContent = "Too high";
+		tries++;
+		}
+	else {
+		resultM.textContent = "Too low";
+		tries++;
+		}
+	}
+
+</script>
+</body>
+</html>

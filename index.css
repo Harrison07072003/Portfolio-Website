@@ -1,0 +1,76 @@
+body{background-image: url(Images/e-background.webp);
+	 font-family: 'Press Start 2P', monospace;
+	 color: #FFFFFF;
+}
+
+#wrapper{width: 960px;
+		 margin: 0 auto;
+		 box-shadow: 3px 3px 3px #333333;
+		 border-color: #06402B;
+		 border-width: 10px;
+		 background-image: url(Images/night.jpg);
+		 background-repeat: no-repeat;
+		 background-size: cover;}
+
+nav{background-color: #000000;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 16px;
+	letter-spacing: 1px;
+	text-shadow: 2px 2px #444;
+	text-align:center;
+	margin-top: 0px;
+}
+
+.textbox {
+  background-color: black;
+  border: 3px solid white;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  width: fit-content;
+  max-width: 90%;
+  box-shadow: 0 0 0 2px #666, 4px 4px 0 #222;
+  font-size: 24px;
+  line-height: 1.4;
+  margin: 2rem auto; 
+}
+
+h1{text-align: center;
+   color: #000000;
+   height: fit-content;
+   background-image: url(Images/onett.png);
+   background-size: cover;
+   padding-bottom: 12px;
+   margin-bottom:0;
+   }
+
+
+h2{background-image: url(Images/e-battle.gif);
+   text-align: center;
+   margin-top: 0;
+   
+   }
+
+ul {
+  list-style: none; /* remove default bullets */
+  padding-left: 0;
+}
+
+ul li {
+  background: url(Images/mr.saturns.png) no-repeat left center;
+  background-size: 20px 20px; /* scale the icon */
+  padding-left: 28px;         /* space for the icon */
+}
+
+footer{text-align: center;
+	   color: #000000;
+	   background-image: url(Images/e-sunset.png);
+	   background-size: contain;
+	
+	}
+dd{font-size: 20x;} 
+
+a {
+  color: #4DA6FF;
+  text-decoration: none;
+}

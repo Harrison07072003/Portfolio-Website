@@ -1,0 +1,30 @@
+body{font-family: Arial, sans-serif;}
+
+table{margin: auto;
+	  width: 80%;
+	  height: 500px;
+	  border: 5px solid #000066;
+	  border-collapse: collapse;
+	  text-align: center;}
+
+th,td{border: 1px solid #000066;
+	  padding: 10px;}
+	  
+caption{font-size: 1.2em;
+		font-weight: bold;
+		padding-bottom: 0.5em;}
+		
+#table1 tr:first-of-type{background-color:#FFFF00;}
+#table1 tr:last-of-type{background-color:#FFFF00;}
+
+.col-a{background-color: #00FF00;}
+
+.col-e{background-color: #00FF00;}
+
+#large{background-image: url(../Images/grizzlylarge.jpg);
+	   background-size: 100%;}
+	   
+#center{width: 60%;
+		height: 60%;
+		background-image: url(../Images/media-design.jpg);
+		background-size: cover;}

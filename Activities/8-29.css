@@ -1,0 +1,107 @@
+body {background-color: #F2F2F2; 
+	      color: #182628;
+		  font-family: Arial, Verdana, sans-serif;
+		  background-image: url(../Images/dots.png);
+		  background-repeat: repeat-x;
+		  background-attachment: fixed;}
+	
+	h1 {background-color: #65CCB8; 
+	    color: #F2F2F2;
+		font-family: Georgia, "Times New Roman", serif;
+		text-align: center;
+		word-spacing: 2em;
+		line-height: 200%;
+		text-shadow: 5px 4px 5px #182628;
+		border-width: 3px;
+		border-style: ridge;
+		border-color: #CCCCCC;
+		background-image: url(../Images/design.png);
+		background-size: contain;
+		background-repeat: no-repeat;background-position: right;
+		border-radius: 50px;
+		opacity: 0.9;}
+		
+	h2 {background-color: #65CCB8; 
+	   color: #182628;
+	   font-family: Georgia, "Times New Roman", serif;
+	   text-align: center;
+	   line-height: 150%;
+	   text-shadow: 5px 4px 5px #F2F2F2;
+	   border-bottom: 2px dashed #191970;
+	   padding-top: 10px;
+	   padding-bottom: 5px;
+	   background-image: linear-gradient(to bottom, #FFFFFF,#65CCB8);
+	   border-top-left-radius: 50px;
+	   border-bottom-right-radius: 50px;}
+	   
+	 p {font-size: 1.2em;
+		text-indent: 3em;}
+	 
+	 footer {font-size: 0.8em;
+			font-style: italic;
+			color: #3B945E;
+			text-align: center;}
+			
+	nav {text-align: center;
+		font-weight: bold;
+		padding: 15px;
+		background-image: radial-gradient(#FFFFFF, #65CCB8);
+		border-radius: 50px;
+		opacity: 0.7;}
+		
+	dt {font-weight: bold;
+		letter-spacing: 3px;
+		text-decoration: underline;}
+		
+	.services{color: #3B945E;}
+	
+	#phone {font-weight: bold;
+			font-style: italic;
+			color: #3B945E;}
+	
+	span{font-style: italic;
+			color: #3B945E;}
+			
+	figure{width: 350px;
+		   height: 200px;
+		   display: block;
+		   margin: auto;
+		   border: 1px solid #000000;
+		   padding: 5px;
+		   border-bottom-left-radius: 30px;
+		   border-bottom-right-radius: 30px;}
+		   
+	img{width: 100%;
+		height: 90%}
+		
+	figcaption{text-align: center;
+			   font-family: Papyrus, fantasy;}
+			   
+	#wrapper {width: 960px;
+			  margin: auto;
+			  box-shadow: 5px 5px 5px #1E1E1E;
+			  background: url(../Images/web-icon.png) no-repeat left bottom,
+						  url(../Images/web-icon.png) no-repeat right bottom;
+			  background-size: 100px, 100px;}
+			  
+	#address {font-weight: bold;
+			  background-image: url(../Images/address.png);
+			  background-repeat: no-repeat;}
+			  
+	#life{width: 400px;
+		  height: 250px;
+		  display: block;
+		  margin: auto;
+		  border: 10px solid #006400;
+		  padding: 12px;
+		  border-top-left-radius: 25px;
+		  border-bottom-left-radius: 25px;
+		  border-top-right-radius: 25px;
+		  border-bottom-right-radius: 0px;
+		  }
+		  
+	#message {text-align:center;
+			  font-family: Georgia, "Times New Roman", serif;}
+			  
+	#tree {width: 100%;
+		   height: 95%}

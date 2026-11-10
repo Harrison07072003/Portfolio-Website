@@ -1,0 +1,280 @@
+h1{text-align: center;
+	color: #013220;
+	font-family: Brush Script MT, Brush Script Std, cursive;
+	font-size: 3.5em;
+	letter-spacing:0.1em;
+	text-shadow: 2px 2px #90EE90;}
+
+h2{text-align: center;
+   background-image: linear-gradient(45deg, orange, purple, green, blue);
+   background-size:cover;
+   width:200px;
+   margin:auto;
+   border: 2px #FFEAEB dashed;
+   font-family: Trebuchet MS, sans-serif;}
+
+h3{color: white;
+   text-shadow: 0 0 5px blue, 0 0 10px red, 0 0 15px purple;
+   text-align: center;}
+
+body {background-image: url(../Images/evangelion.jpeg);
+	  background-size: 120% auto;
+	  background-repeat: no-repeat;
+	  background-position: center;
+	  background-attachment: fixed;
+}
+
+#poster{display: block;
+		margin: auto;
+		width: 420px;
+		height: 600px;
+		background-image: url(../Images/evaposter.jpg);
+		background-size: cover;
+		background-repeat:no-repeat;
+		border: 10px black solid;
+		animation: bgColorChange 12s ease-in-out infinite;
+		}
+		
+.button2{background-color:#353535;
+		border: 3px ridge #1E1E1E;
+		box-shadow: 3px 3px 3px #1F1F1F;
+		padding: 1em;
+		font-weight: bold;
+		border-radius: 25px;
+		display: inline-block;
+		width: fit-content;}
+
+nav{display: block;
+	background-image: url(../Images/head.png);
+	background-size: cover;
+	display:block;
+	margin: auto;
+	width: 1000px;
+	color: #F2F2F2;
+	font-size: 1.5em;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+	text-align: center;}
+	
+nav ul{list-style-type: none;
+	   margin: 0;
+	   }
+
+nav a{text-decoration: none;
+	  display: block;
+	  color: #ADD8E6;}
+	  
+nav li{display: inline-block;
+	   padding: 0.5em;
+	   margin: 0.3em;
+	   color: #ADD8E6;}
+	   
+nav li:hover ul{display: block;}
+	   
+nav ul ul{position: absolute;
+		  padding: 0;
+		  text-align: left;
+		  background-color: #25486d;
+		  visibility:hidden;
+		  opacity: 0;
+		  transition: opacity 1s;}
+		  
+nav ul ul li{display: block;
+			 border-bottom: 1px solid #F2F2F2;
+			 width: 8em;
+			 padding-left: 1em;
+			 margin-left: 0;
+			 }
+			 
+nav ul li:hover > ul {
+  visibility: visible; 
+  opacity: 1;         
+}
+			 
+.textbox {font-family: Helvetica Neue, Helvetica, sans-serif;
+		  background-color: #111111;
+		  color: #F2F2F2;
+		  border: 4px solid white;
+		  border-radius: 12px;
+		  padding: 16px 20px;
+		  min-width: 500px;
+		  width:50%;
+		  min-height:150px;
+		  height:90%;
+		  margin: 20px auto;
+		  box-shadow: 4px 4px 0px #000;
+		  font-size: 18px;
+		  line-height: 1.6;
+		  transition: background-image 4s,background-color 2s,text-shadow 4s,color 2s;
+}
+
+#unit01{background-image: url(../Images/tokyo.jpg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		color:blue;
+		text-shadow: 2px 0px #ADD8E6;
+		}
+	  
+#unit01:hover{background-image: url(../Images/unit01.jpg);
+			background-color: transparent;
+			text-shadow: 2px 0px black;}
+			
+#unit02{background-image: url(../Images/tokyo.jpg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		color: #013220;
+		text-shadow: 2px 0px #F2F2F2;
+		}
+	  
+#unit02:hover{background-image: url(../Images/unit02.jpg);
+			background-color: transparent;}
+		
+
+#unit03{background-image: url(../Images/tokyo.jpg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		color:black;
+		text-shadow: 1px 1px #F2F2F2;
+		}
+	  
+#unit03:hover{background-image: url(../Images/unit00.jpg);
+			background-color: transparent;
+			color: white;
+			text-shadow: 2px 0px #252525;}
+			
+.video-box {
+  width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: block;
+  margin: auto;
+}
+
+.box{
+	display: block;
+	margin: auto;
+}
+
+
+.container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+	 
+#shin{width:300px;
+	  height: 300px;
+	  background-image: url(../Images/shinji.jpg);
+	  background-size:cover;
+	  transition: background-image 1.2s ease-in-out, color 3s;
+	  font-weight:bold;}
+
+#shin:hover{background-image: url(../Images/Megumi.webp);
+			color:white;}
+
+#rei{width:300px;
+	  height: 300px;
+	  background-image: url(../Images/Rei.webp);
+	  background-size:cover;
+	  transition: background-image 1.2s, color 3s;
+	  background-repeat:no-repeat;
+	  color: white;
+	  font-weight:bold;}
+
+#rei:hover{background-image: url(../Images/Haya.jpg);
+		   color: black;}
+		   
+#asuka{width:300px;
+	  height: 300px;
+	  background-image: url(../Images/asuka.jpg);
+	  background-size:cover;
+	  transition: background-image 1.2s;
+	  font-weight:bold;}
+
+#asuka:hover{background-image: url(../Images/Yuko.webp);
+			 background-size: cover;
+			 background-position: center;
+			 background-repeat: no-repeat;}
+
+#misato{width:300px;
+	  height: 300px;
+	  background-image: url(../Images/misato.jpg);
+	  background-size:cover;
+	  transition: background-image 1.2s;
+	  font-weight:bold;
+	  color:white;}
+
+#misato:hover{background-image: url(../Images/kotono.webp);
+			  color: black;}
+
+#gendo{width:300px;
+	  height: 300px;
+	  background-image: url(../Images/gendo.jpg);
+	  background-size:cover;
+	  transition: background-image 1.2s;
+	  font-weight:bold;
+	  color: white;}
+
+#gendo:hover{background-image: url(../Images/fumihiko.webp);
+			 background-position: -20px;
+			 background-repeat: no-repeat;}
+			 
+#ritsuko{width:300px;
+	  height: 300px;
+	  background-image: url(../Images/ritsuko.jpg);
+	  background-size:cover;
+	  transition: background-image 1.2s;
+	  font-weight:bold;}
+
+#ritsuko:hover{background-image: url(../Images/yuriko.jpg);}
+
+#kozo{width:300px;
+	  height: 300px;
+	  background-image: url(../Images/Kozo.webp);
+	  background-size:cover;
+	  transition: background-image 1.2s;
+	  font-weight:bold;
+	  color: white;}
+
+#kozo:hover{background-image: url(../Images/Moto.jpg);
+			color: black;
+			}
+			
+#kaworu{width:300px;
+	  height: 300px;
+	  background-image: url(../Images/kaworu.webp);
+	  background-size:cover;
+	  background-position: -40px;
+	  transition: background-image 1.2s;
+	  font-weight:bold;
+	   color: white;}
+
+#kaworu:hover{background-image: url(../Images/akira.webp);
+			  background-position: 0px;
+			  color: black;}
+
+
+@keyframes bgColorChange {
+  0% {border: 10px black solid;}
+  25% {border: 10px blue solid;}
+  50% {border: 10px white solid;}
+  75% {border: 10px red solid;}
+  100% {border: 10px black solid;}
+}
+
+.button{background-color:#353535;
+				color: #3B945E;
+				border: 3px ridge #1E1E1E;
+				box-shadow: 3px 3px 3px #1F1F1F;
+				padding: 1em;
+				font-weight: bold;
+				border-radius: 25px;
+				display: block;
+				width: fit-content;
+				margin:auto;}
+			

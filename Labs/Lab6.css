@@ -1,0 +1,130 @@
+body {
+	 background-image: linear-gradient(to bottom, purple,orange);
+	 min-height: 100vh;
+	 margin: 0;
+	 overflow-x: hidden;
+}
+h1 {position: relative;
+	animation: move 5s infinite alternate;}
+	
+@keyframes move {
+	from{left: 0px;
+		 color:red;}
+	to{left: calc(100% - 300px);
+		color: yellow;
+		font-size: 2em;
+		font-weight: bold;}
+}
+
+h2{color:white;
+   text-align:center;}
+   
+img{width: 300px;
+	height: 200px;
+	display: block;
+	margin: auto;}
+	 
+button {display: inline-block;
+		margin: 0 auto;}
+		
+#bcontainer{text-align: center;}
+
+#candy{height: 181px;
+	   width: 292px;
+	   display:block;
+	   margin:auto;
+	   background-image: url(../Images/candy.png);
+	   transition: transform 2s;}
+
+#candy:hover {transform:rotate(360deg);}
+
+#witch{height:120px;
+	   width:150px;
+	   background-size: 100%;
+	   background-image: url(../Images/witch.png);
+	   position: fixed;
+	   animation: bounce 10s infinite, dash2 10s infinite;}
+	   
+@keyframes bounce {
+  0%   { top: 45%; left: 0%; transform: rotateZ(0deg); }
+  25%  { top: 0%; left: 50%; transform: rotateZ(90deg); }
+  50%  { top: 45%; left: calc(100% - 150px); transform: rotateZ(180deg); }
+  75%  { top: 90%; left: 50%; transform: rotateZ(270deg); }
+  100% { top: 45%; left: 0%; transform: rotateZ(360deg); }
+}
+
+@keyframes dash2 {
+  0%   { left: 0; transform: scaleX(1); }
+  25%  { left: 40%; transform: scaleX(1); }
+  50%  { left: calc(100% - 150px); transform: scaleX(1); }
+  51%  { transform: scaleX(-1); }
+  75%  { left: 40%; transform: scaleX(-1); }
+  99%  { transform: scaleX(-1); }
+  100% { left: 0; transform: scaleX(1); }
+}
+
+#pumpkin {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  
+  background-image: url("../Images/pumpkins.png");
+  background-repeat: repeat-x;    
+  background-size: auto 150px;
+  background-position: bottom left;
+  
+}
+
+.neon-text {
+  color: #fff;
+  animation: neon-glow 1.5s infinite alternate;
+}
+
+@keyframes neon-glow {
+  from {
+    text-shadow:
+      0 0 10px #FFA500,
+      0 0 20px #FFA500,
+      0 0 30px #FFA500;
+  }
+  to {
+    text-shadow:
+      0 0 5px #000000,
+      0 0 15px #000000,
+      0 0 25px #000000;
+  }
+}
+
+#ghost {
+    position: fixed;
+    top: 50px;
+    right: 30px;       
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    background-image: url("../Images/ghost.png");
+    opacity:0;
+    transition:opacity 1.5s;
+}
+
+#ghost:hover {
+    opacity:1;
+}
+
+.boo-text {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#ghost:hover .boo-text {
+    opacity: 1;
+}

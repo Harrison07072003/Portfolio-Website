@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>10-8</title>
+	<link href = "../Images/web-icon.png" rel = "icon" type = "image/x-icon">
+	<style>
+		th{text-align: right;}
+		fieldset, textarea{width:400px;
+				 border: 2px ridge #EAEAEA;
+				 padding: 10px;}
+		legend{font-weight: bold;}
+	</style>
+</head>
+<body>
+<h1>IT Student Association Registration</h1>
+<form method = "post" action = "10-8.php">
+<fieldset>
+<legend>Personal Information</legend>
+<table>
+	<tr><th>*Student ID:</th><td><input type = "text" name = "studentIDD" placeholder = "E.g. 900###" required = "required"></td></tr>
+	<tr><th>*Password:</th><td><input type = "password" name = "password1" placeholder = "Choose a strong password" required = "required"></td></tr>
+	<tr><th>*Retype-Password:</th><td><input type = "password" name = "password2" placeholder = "Passwords must match" required = "required"></td></tr>
+	<tr><th>First Name:</th><td><input type = "text" name = "fname" placeholder = "E.g. John"></td></tr>
+	<tr><th>Last Name:</th><td><input type = "text"  name = "lname" placeholder = "E.g. Doe"></td></tr>
+	<tr><th>*Email:</th><td><input type = "email" name = "email" placeholder = "E.g. jdoe@ggc.edu" required = "required"></td></tr>
+	<tr><th>Phone:</th><td><input type = "text" name = "phone" placeholder = "E.g. 888-888-8888"></td></tr>
+	<tr><th>Level:</th><td><select name = "level" size = "1">
+		<option>Choose your level at GGC</option>
+		<option value = "Freshmen">Freshman</option>
+		<option value = "Sophomore">Sophomore</option>
+		<option value = "Junior">Junior</option>
+		<option value = "Senior">Senior</option>
+	</select></td></tr>
+</table>
+</fieldset>
+<br>
+<fieldset>
+<legend>IT Preferences</legend>
+	<label><input type = "checkbox" name = "ownComputer" value = "yes">I own a computer.</label><br><br>
+	What is your favorite web browser(you can pick more than one asnwers)?<br>
+	<label><input type = "checkbox" name = "edge" value = "yes">Edge</label><br>
+	<label><input type = "checkbox" name = "firefox" value = "yes">Firefox</label><br>
+	<label><input type = "checkbox" name = "chrome" value = "yes">Chrome</label><br>
+	<label><input type = "checkbox" name = "safari" value = "yes">Safari</label><br><br>
+	What is your favorite computer brand?<br>
+	<label><input type = "radio" name = "computer" value = "Mac">Mac</label><br>
+	<label><input type = "radio" name = "computer" value = "Dell">Dell</label><br>
+	<label><input type = "radio" name = "computer" value = "HP">HP</label><br>
+	<label><input type = "radio" name = "computer" value = "Lenovo">Lenovo</label><br><br>
+	What is your major concentration?<br>
+	<select name = "concentration" size = "5">
+		<option value = "Digital Media">Digital Media</option>
+		<option value ="Data Analytics">Data Analytics</option>
+		<option value ="Enterprise Systems">Enterprise Systems</option>
+		<option value = "Software Dev">Software Dev</option>
+		<option value = "Systems and Cybersecurity">Systems and Cybersecurity</option>
+	</select>
+</fieldset>
+	<br>
+	<input type = "submit">
+	<input type = "reset">
+</form>
+</body>
+</html>

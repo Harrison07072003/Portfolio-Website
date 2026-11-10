@@ -1,0 +1,75 @@
+#office{width: 880px;
+	    height: 600px;
+		background-color: #57BA98;
+		color: #F2F2F2;
+		padding: 100px;
+		border: 30px dashed #186268;
+		margin: 100px;
+		overflow: scroll;
+		background-image: url(../Images/dots.png);
+		background-clip: border-box;
+		}	
+		
+#desk{width: 300px;
+	  height: 300px;
+      background-color: #F2F2F2;
+	  color: #3B945E;
+	  padding: 10px;
+	  border: 10px outset #DEB887;
+	  margin: 0px;
+	  float: right;
+	  background-image: url(../Images/grizzly.jpg);
+	  background-repeat: no-repeat;
+      background-position: top right;
+	  background-origin: content-box;
+		}
+		
+#book1{background-color: #800080;
+	   width: 125px;
+	   height: 50px;
+	   border: 10px outset #DEB887;
+	   margin: 0px;
+	   font-family: Georgia, "Times New Roman", serif;
+	   color:#A2A500
+	   }
+#book2{background-color: #006400;
+	   width: 125px;
+	   height: 50px;
+	   border: 10px outset #DEB887;
+	   margin: 0px;
+	   font-family: Arial, Verdana, sans-serif;
+	   float: right;
+	   color: #ADD8E6
+	   }
+#book3{background-color: #FFA500;
+	   width: 125px;
+	   height: 50px;
+	   border: 10px outset #DEB887;
+	   margin: 0px;
+	   font-family: Courier, Console, monospace;
+	   color: #E75480
+	   }
+		
+p{background-color: #DEB887;
+  color: #3B945E;
+  width: 150px;
+  height: 150px;
+  border: 5px outset #F2F2F2;
+  }
+  
+ h2{background-color: #F2F2F2;
+	color: #3B945E;
+	text-align: center;
+	clear: right;}
+	
+ul {padding: 0;}
+
+li {display: inline-block;
+	background-color: #F2F2F2;
+	color: #3B945E;
+	width: 200px;
+	height: 100px;
+	padding: 10px;
+	margin: 5px;}
+	
+*{box-sizing: border-box;}

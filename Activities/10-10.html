@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>10-10</title>
+	<link href = "../Images/web-icon.png" rel = "icon" type = "image/x-icon">
+</head>
+<body>
+<h1>Survey</h1>
+<form method = "post" action = "10-10.php">
+<h3>What is your favorite website?</h3>
+Website: <input type = "url" name = "website">
+
+<h3>What is your favorite color?</h3>
+Choose a color: <input type = "text" name = "color1" list = "colorList">
+<datalist id = "colorList">
+	<option value = "Red" label = "Red">
+	<option value = "Green" label = "Green">
+	<option value = "Blue" label = "Blue">
+</datalist>
+
+<h3>What is your least favorite color?</h3>
+Choose a color: <input type = "color" name = "color2">
+
+<h3>What is your favorite day?</h3>
+Choose a day: <input type = "date" name = "day">
+
+<h3>What is your height</h3>
+<input type = "number" min = "0" max = "7" value = "5" name = "feet"> feet
+<input type = "number" min = "0" max = "11" name = "inches"> inches
+
+<h3>How are you satisfied with this website?</h3>
+Choose a sore between 1 and 100:<br>
+1 <input type = "range" min = "1" max = "100" name = "score"> 100
+
+<h3>Your opinion about classes</h3>
+<table border = "1">
+	<tr>
+		<td>I like classes starting at 8am</td>
+		<td><label><input type = "radio" name = "response" value = "Agree">Agree</label></td>
+		<td><label><input type = "radio" name = "response" value = "Neutral">Neutral</label></td>
+		<td><label><input type = "radio" name = "response" value = "Disagree">Disagree</label></td>
+	</tr>
+	<tr>   
+		<td>I like evening classes</td>
+		<td><label><input type = "radio" name = "response2" value = "Agree">Agree</label></td>
+		<td><label><input type = "radio" name = "response2" value = "Neutral">Neutral</label></td>
+		<td><label><input type = "radio" name = "response2" value = "Disagree">Disagree</label></td>
+	</tr>
+</table>
+<br>
+	<input type = "submit">
+	<input type = "reset">
+</form>
+</body>
+</html>

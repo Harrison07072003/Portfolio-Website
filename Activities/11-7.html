@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>11-7</title>
+	<link href = "../Images/web-icon.png" rel = "icon" type = "image/x-icon">
+</head>
+<body>
+<canvas id = "myCanvas" width = "200" height = "650" style = "border: 1px solid #000000">
+</canvas>
+<script>
+	let canv = document.getElementById("myCanvas");
+	let ctx = canv.getContext("2d");
+	
+	//draw a square/rectangle
+	ctx.fillStyle = "red";
+	//fillRect(x0,y0,width,height);
+	ctx.fillRect(100,0,100,100);
+	
+	//draw lines
+	ctx.moveTo(120,20);
+	ctx.lineTo(180,50);
+	ctx.stroke();
+	
+	ctx.moveTo(180,20);
+	ctx.lineTo(120,50);
+	ctx.stroke();
+	
+	//draw an arc
+	//arc(x,y,r,start-Angle,end-Angle);
+	ctx.beginPath();
+	ctx.arc(150,50,30,0.15*Math.PI,0.85*Math.PI);
+	ctx.stroke();
+	
+	//draw a piece od a pie
+	ctx.beginPath();
+	ctx.arc(0,0,50,0,Math.PI);
+	ctx.fillStyle = "yellow";
+	ctx.fill();
+	
+	//createLinearGradient(x0,y0,x1,y1)
+	let grd = ctx.createLinearGradient(0,120,200,120);
+	grd.addColorStop(0,"blue");
+	grd.addColorStop(0.33,"pink");
+	grd.addColorStop(0.67,"purple");
+	grd.addColorStop(1,"green");
+	ctx.fillStyle = grd;
+	ctx.fillRect(0,120,200,80);
+	//diagonol gradient
+	let grd1 = ctx.createLinearGradient(0,220,200,300);
+	grd1.addColorStop(0,"blue");
+	grd1.addColorStop(0.33,"pink");
+	grd1.addColorStop(0.67,"purple");
+	grd1.addColorStop(1,"green");
+	ctx.fillStyle = grd1;
+	ctx.fillRect(0,220,200,80);
+	//vertical gradient
+	let grd2 = ctx.createLinearGradient(0,320,0,400);
+	grd2.addColorStop(0,"blue");
+	grd2.addColorStop(0.33,"pink");
+	grd2.addColorStop(0.67,"purple");
+	grd2.addColorStop(1,"green");
+	ctx.fillStyle = grd2;
+	ctx.fillRect(0,320,200,80);
+	
+	//createRadialGradient(x0,y0,r0,x1,y1,r1)
+	let grd3 = ctx.createRadialGradient(100,460,5,100,460,30);
+	grd3.addColorStop(0,"red");
+	grd3.addColorStop(1,"white");
+	ctx.fillStyle = grd3;
+	ctx.fillRect(0,420,200,80);
+	
+	//add text
+	ctx.font = "30px Arial";
+	ctx.fillStyle = "red";
+	ctx.fillText("Hello World",10,540);
+	//
+	ctx.strokeStyle = grd;
+	ctx.strokeText("Hello World",10,580);
+	//
+	let grd4 = ctx.createLinearGradient(0,600,0,620);
+	grd4.addColorStop(0,"blue");
+	grd4.addColorStop(0.33,"pink");
+	grd4.addColorStop(0.67,"purple");
+	grd4.addColorStop(1,"green");
+	ctx.strokeStyle = "blue";
+	ctx.strokeText("Hello World",10,620);
+	ctx.fillStyle = grd4;
+	ctx.fillText("Hello World",10,620);
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>10-29</title>
+	<link href = "../Images/web-icon.png" rel = "icon" type = "image/x-icon">
+</head>
+<body>
+<script>
+	let userName;
+	userName = prompt("Please enter your name:");
+	document.write("<h2>Hello " + userName + "</h2>");
+	
+	let userColor;
+	userColor = prompt(userName + ", what color do you like for the background of the webpage?");
+	document.bgColor = userColor;
+	userColor = prompt(userName + ", what color do you like for the font of the webpage?");
+	document.fgColor = userColor;
+	
+	
+	let score;
+	score = prompt(userName + ", please enter your Test 2 score:");
+	if(score >= 90) {
+		document.write("<h3>" + userName + ", you got an A on Test 2!</h3>");
+	}
+	else if(score >= 80) {
+		document.write("<h3>" + userName + ", you got a B on Test 2!</h3>");
+	}
+	else if(score >= 70) {
+		document.write("<h3>" + userName + ", you got a C on Test 2!</h3>");
+	}
+	else if(score >= 60) {
+		document.write("<h3>" + userName + ", you got a D on Test 2!</h3>");
+	}
+	else {
+		document.write("<h3>" + userName + ", you got a F Test 2!</h3>");
+	}
+</script>
+
+<h2>Select a test to take:</h2>
+<input type = "button" value = "Easy" onclick = "easyTest()">
+<input type = "button" value = "Medium" onclick = "mediumTest()">
+
+<script>
+function easyTest(){
+	var number = prompt("What is 5 + 5?");
+	if(parseInt(number) == 10)
+		alert("Correct!");
+	else
+		alert("Wrong");
+}
+
+function mediumTest(){
+	var number1 = prompt("Enter your first number?");
+	var number2 = prompt("Enter your second number?");
+	var answer = prompt("What is " + number1 + " * " + number2 + "?");
+	if(parseInt(number1) * parseInt(number2) == parseInt(answer))
+		alert("Correct!");
+	else
+		alert("Wrong");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>10-6</title>
+	<link href = "../Images/web-icon.png" rel = "icon" type = "image/x-icon">
+	<style>
+		th{text-align: right;}
+		fieldset, textarea{width:400px;
+				 border: 2px ridge #EAEAEA;
+				 padding: 10px;}
+		legend{font-weight: bold;}
+	</style>
+</head>
+<body>
+<h1>Contact Us</h1>
+<form method = "get" action = "10-6.php">
+<fieldset>
+<legend>Customer Information</legend>
+<table>
+	<tr><th>First Name:</th><td><input type = "text" name = "fname" placeholder = "E.g. John"></td></tr>
+	<tr><th>Last Name:</th><td><input type = "text"  name = "lname" placeholder = "E.g. Doe"></td></tr>
+	<tr><th>Email:</th><td><input type = "email" name = "email" placeholder = "E.g. jdoe@ggc.edu"></td></tr>
+	<tr><th>Phone:</th><td><input type = "text" name = "phone" placeholder = "E.g. 888-888-8888"></td></tr>
+</table>
+</fieldset>
+<br>
+	Comments:<br>
+	<textarea rows = "4" cols = "40" name = "comments" placeholder = "Please input your comments here."></textarea><br><br>
+	How would you like us to contact you about your comments?<br>
+	<label><input type = "radio" name = "contact" value = "Via email">Via email</label><br>
+	<label><input type = "radio" name = "contact" value = "Via phone call">Via phone</label><br>
+	<label><input type = "radio" name = "contact" value = "Either way is fine">Either way is fine</label><br>
+	<label><input type = "radio" name = "contact" value = "Do not contact me">Do not contact me</label><br>
+	<br>
+	<input type = "submit">
+	<input type = "reset">
+</form>
+</body>
+</html>

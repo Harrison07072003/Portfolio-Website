@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab-7</title>
+	<link href = "../Images/web-icon.png" rel = "icon" type = "image/x-icon">
+</head>
+<body>
+<canvas id = "myCanvas" width = "400" height = "400" style = "border: 1px solid #000000">
+</canvas>
+<script>
+	let canv = document.getElementById("myCanvas");
+	let ctx = canv.getContext("2d");
+	
+	//background
+	ctx.fillStyle = "#9999FF";
+	ctx.fillRect(0,0,400,350);
+	
+	//sun
+	ctx.beginPath();
+	ctx.arc(0,0,70,0,Math.PI);
+	ctx.fillStyle = "yellow";
+	ctx.fill();
+	
+	//snowman
+	
+	//bottom
+	ctx.beginPath();
+	ctx.arc(200,320,100,Math.PI*0.9,Math.PI*2.1);
+	ctx.fillStyle = "white";
+	ctx.fill();
+	//top
+	ctx.beginPath();
+	ctx.arc(200,170,70,0,Math.PI*2);
+	ctx.fill();
+	//buttons
+	ctx.fillStyle = "black";
+	
+	ctx.beginPath();
+	ctx.arc(200,320,8,0,Math.PI*2);
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc(200,270,8,0,Math.PI*2);
+	ctx.fill();
+	//eyes
+	ctx.beginPath();
+	ctx.arc(170,160,8,0,Math.PI*2);
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc(230,160,8,0,Math.PI*2);
+	ctx.fill();
+	//hands
+	ctx.moveTo(130,270);
+	ctx.lineTo(50,170);
+	ctx.stroke();
+	
+	ctx.moveTo(270,270);
+	ctx.lineTo(350,170);
+	ctx.stroke();
+	
+	//mouth
+	ctx.beginPath();
+	ctx.arc(200,180,20,Math.PI*2.2,Math.PI*0.8);
+	ctx.fillStyle = "red";
+	ctx.fill();
+	
+	//text
+	//by text
+	ctx.font = "20px Arial";
+	let grd = ctx.createLinearGradient(0,370,200,370);
+	grd.addColorStop(0,"white");
+	grd.addColorStop(0.95,"red");
+	ctx.strokeStyle = grd;
+	ctx.strokeText("by Harrison Allen",130,370);
+	
+	//hello text
+	ctx.font = "30px Arial";
+	let grd2 = ctx.createLinearGradient(0,20,0,50);
+	grd2.addColorStop(0,"yellow");
+	grd2.addColorStop(1,"white");
+	ctx.strokeStyle = "yellow";
+	ctx.strokeText("Hello, Winter",115,55);
+	ctx.fillStyle = grd2;
+	ctx.fillText("Hello, Winter",115,55);
+	
+	//tree 1
+	ctx.fillStyle = "green";
+	ctx.beginPath();
+	ctx.moveTo(370,255);
+	ctx.lineTo(340,330);
+	ctx.lineTo(400,330);
+	ctx.closePath();
+	ctx.fill();
+	//trunk
+	ctx.fillStyle = "brown";
+	ctx.fillRect(365,330,10,20);
+	
+	//tree 2
+	ctx.fillStyle = "green";
+	ctx.beginPath();
+	ctx.moveTo(30,255);
+	ctx.lineTo(0,330);
+	ctx.lineTo(60,330);
+	ctx.closePath();
+	ctx.fill();
+	//trunk
+	ctx.fillStyle = "brown";
+	ctx.fillRect(25,330,10,20);
+</script>
+</body>
+</html>
